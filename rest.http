@@ -1,0 +1,36 @@
+GET http://localhost:3000/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MjAxNzcxMDAsImV4cCI6MTcyMDE3NzExNSwiYXVkIjoiNjY4N2JiZDFmYjcwMTkwMzY2ZjNjY2EwIiwiaXNzIjoidGVzdCJ9.h_YX6_O5lOVGfyJQ6MIVQeZllt1vo8_flTOlqxUaUXc
+
+# login
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "email": "125@gmail.com",
+    "password": "1234"
+}
+
+# register
+POST http://localhost:3000/auth/register
+Content-Type: application/json
+
+{
+    "email": "125@gmail.com",
+    "password": "1234"
+}
+
+# refresh-token
+POST http://localhost:3000/auth/refresh-token
+Content-Type: application/json
+
+{
+    "refreshToken":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3MjA0MjI0NDAsImV4cCI6MTc1MTk4MDA0MCwiYXVkIjoiNjY4N2JiZDFmYjcwMTkwMzY2ZjNjY2EwIiwiaXNzIjoidGVzdCJ9.7_YTHrwJduA0PA28iRiyzINShgITHjnYYl066EevSms"
+}
+
+# logout
+DELETE http://localhost:3000/auth/logout
+Content-Type: application/json
+
+{
+   "refreshToken":""
+}
